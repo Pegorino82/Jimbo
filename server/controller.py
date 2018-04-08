@@ -31,6 +31,7 @@ def auth(request, code=None):
     code_ = get_code(request)
     if isinstance(code_, int):
         code = code_
+        # if code == 402
     result = list()
     result.append(JIMResponse.make_response(code).jim_dict)
     return result
@@ -39,7 +40,7 @@ def auth(request, code=None):
 def get(request, code=200):
     result = list()
     client = DBStorage(request).find_client(request.get('account_name'))
-    print('client-->', client)
+    print('client-->', client.account_name)
     contacts_list = DBStorage(request).get_contacts()
     print('contacts_list-->', contacts_list)
     res = JIMResponse.get_contacts(code).jim_dict
@@ -47,6 +48,7 @@ def get(request, code=200):
     result.append(res)
     for cont in contacts_list:
         result.append(JIMResponse.contacts(cont).jim_dict)
+    print('result response->', result)
     return result
 
 
