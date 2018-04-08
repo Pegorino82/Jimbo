@@ -55,8 +55,9 @@ class MainWidget(Widget):
         self.ids.message_line.text = ''
 
     def render_in_chat(self):
-        self.receiver = Thread(target=self.client.get_byte_response, daemon=True)
+        self.receiver = Thread(target=self.client.get_byte_response, daemon=False)
         self.receiver.start()
+        # self.receiver.join(0.5)
 
     def print_to_chat(self, data):
         print('this is for chat', data)
@@ -64,6 +65,10 @@ class MainWidget(Widget):
 
     def print_to_login(self, data):
         print('to login-->', data)
+        if data == 'Failed to authenticate!':
+            self.client.sock.close()
+            self.ids.account.text = ''
+            self.ids.password.text = ''
 
     def print_to_contacts(self, data):
         if data['action'] == 'contact' or (data['action'] == 'add_contact' and data['response'] == 202):
@@ -72,6 +77,7 @@ class MainWidget(Widget):
                 self.ids.list_contacts.item_strings.append(contact_name)
         elif data['action'] == 'del_contact' and data['response'] == 202:
             contact_name = data['contact']
+            self.ids.contact_line.text = ''
             if contact_name in self.ids.list_contacts.item_strings:
                 self.ids.list_contacts.item_strings.remove(contact_name)
 
@@ -81,7 +87,7 @@ class MainWidget(Widget):
         self.user = User(account_name=self.account_name, password=self.password)
         self.client = Client(self.account_name, self.password, chat_window=self)
         self.render_in_chat()
-        time.sleep(0.01)
+        time.sleep(0.5)
         self.refresh_contacts()
 
     def get_cancel(self):
