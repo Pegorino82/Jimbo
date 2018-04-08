@@ -54,10 +54,11 @@ class DBStorage(Storage):
         #     print('failed to add client ->', 409)
         #     return 409
         except Exception as err:
-            print('failed to add client ->', err)
             if str(err).find('sqlite3.IntegrityError') > 0:
+                print('client almost in db ->', err)
                 return 409
             else:
+                print('error on add_client ->', err)
                 return 500
 
     def add_contact(self):

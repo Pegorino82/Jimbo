@@ -7,9 +7,26 @@ from server.db.dbstorage import DBStorage
 
 
 def add_client(request):
-    code = DBStorage(request).add_client()
-    DBStorage(request).add_to_history()
-    return code
+    action = request.get('action')
+    account_name = DBStorage(request).get_user['account_name']
+    password = DBStorage(request).get_user['password']
+    client = DBStorage(request).find_client(account_name)
+    if action == 'authenticate':
+        if not client:
+            code = DBStorage(request).add_client()
+            DBStorage(request).add_to_history()
+            return code
+        else:
+            if client.password == password:
+                DBStorage(request).add_to_history()
+                return 200
+            else:
+                return 402
+    elif action == 'presence':
+        if client:
+            return 200
+        else:
+            return 404
 
 
 def add_contact(request):
