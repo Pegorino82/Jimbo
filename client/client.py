@@ -54,7 +54,9 @@ class Client(metaclass=ClientVerifier):
         print('connected {} on port {}'.format(self._account_name, self.sock.getsockname()[1]))
 
         auth_request = client_manager(self.user, 'auth')
+        print('sending auth request-->', convert(auth_request))
         self.send_byte_request(auth_request)
+        print('sended!')
 
     @property
     def account_name(self):
@@ -91,7 +93,7 @@ class Client(metaclass=ClientVerifier):
             # client_authenticate(self.sock, self.__secret_key)
             z_bytes = self.sock.recv(SIZE)
             byte_data = zlib.decompress(z_bytes)
-            # print(byte_data)
+            print('data i received:', convert(byte_data))
             if byte_data:
                 # вывод в консоль
                 # data_to_render = self.parse_byte_data(byte_data)
@@ -125,11 +127,14 @@ class Client(metaclass=ClientVerifier):
 
     @staticmethod
     def show_in_login(data):
+
         t = act_time(data['time'])
         if 'alert' in data:
-            return 'Client added!\n{} {} {}'.format(data['response'], data['alert'], t)
+            return '{} {} {}'.format(data['response'], data['alert'], t)
         else:
-            if data['response'] == 409:
+            if data['response'] == 402:
+                return 'Failed to authenticate!'
+            elif data['response'] == 409:
                 return 'Client almost exists! {} {}'.format(data['response'], data['error'])
             elif data['response'] == 500:
                 return 'Some trouble on server {} {}'.format(data['response'], data['error'])
