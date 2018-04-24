@@ -1,0 +1,9 @@
+2018-04-24 18:42:20,611   INFO        Function	client_connected 	called from 	connection_made
+2018-04-24 18:42:20,629   INFO        Client Bob connected, address ('127.0.0.1', 53909)
+2018-04-24 18:42:20,635   INFO        request from ('127.0.0.1', 53909): {'user': {'password': '123', 'account_name': 'Bob'}, 'time': 1524584540.4747772, 'action': 'authenticate'}
+2018-04-24 18:42:21,148   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584541.1308465, 'account_name': 'Bob'}
+2018-04-24 18:42:22,764   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584542.7478497, 'account_name': 'Bob'}
+2018-04-24 18:42:24,572   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584544.5558321, 'account_name': 'Bob'}
+2018-04-24 18:42:25,606   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584545.589446, 'account_name': 'Bob'}
+2018-04-24 18:42:25,804   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584545.7846978, 'account_name': 'Bob'}
+2018-04-24 18:42:26,037   INFO        request from ('127.0.0.1', 53909): {'action': 'get_contacts', 'time': 1524584545.9948163, 'account_name': 'Bob'}

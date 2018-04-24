@@ -1,0 +1,135 @@
+#: import main jimbo.client.kivy_gui.kivy_client
+#: import label kivy.uix.label
+#: import button kivy.uix.button
+#: import sla kivy.adapters.simplelistadapter
+
+<MainWidget>:
+
+    GridLayout:
+        width: root.width
+        height: root.height
+        cols: 2
+
+        GridLayout:
+            cols: 1
+            size_hint: root.width / 3, root.height
+
+            TextInput:
+                id: account
+                text: 'account'
+                size_hint: root.width, root.height / 10
+
+            TextInput:
+                id: password
+                text: 'password'
+                size_hint: root.width, root.height / 10
+                password: True
+
+            GridLayout:
+                size_hint: root.width, root.height / 10
+                cols: 2
+
+                Button:
+                    id: login
+                    text: 'Login'
+
+                    on_press: root.get_login()
+
+                Button:
+                    id: cancel
+                    text: 'Cancel'
+
+                    on_press: root.get_cancel()
+
+            TextInput:
+                id: contact_line
+                size_hint: root.width, root.height / 10
+
+            Button:
+                id: refresh_contacts
+                size_hint: root.width, root.height / 10
+                text: 'refresh contacts list'
+                on_press: root.refresh_contacts()
+
+            GridLayout:
+                size_hint: root.width, root.height / 10
+                cols: 2
+
+                Button:
+                    id: add_contact
+                    text: 'add'
+                    on_press: root.add_contact()
+
+                    canvas:
+                        Color:
+                            rgba: 0, 1, 0, 0.3
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                Button:
+                    id: del_contact
+                    text: 'del'
+                    on_press: root.del_contact()
+
+                    canvas:
+                        Color:
+                            rgba: 1, 0, 0, 0.3
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                #Button:
+                #    id: refresh_contacts
+                #    text: 'refresh'
+                #    on_press: root.refresh_contacts()
+
+            ListView:
+
+                id: list_contacts
+                size_hint: root.width, root.height * 4 / 10
+                item_strings: ['#']
+                font_size: 24
+                adapter:
+                    sla.SimpleListAdapter(
+                    data=self.item_strings,
+                    cls=main.ContactsWidget)
+
+        GridLayout:
+            cols: 1
+            size_hint: root.width * 2 / 3, root.height
+
+            Label:
+                size_hint: root.width / 2, root.height / 2
+                id: chat_label
+                text_size: self.width * 0.8, self.height
+                valign: 'bottom'
+                halign: 'right'
+
+            GridLayout:
+                cols: 2
+                size_hint: (root.width/6, root.height/6)
+
+                TextInput:
+                    size_hint: (root.width * 0.8, root.height * 0.2)
+                    id: message_line
+                    multiline: False
+                    on_text_validate: root.send_press()
+
+                Button:
+                    text: 'Send'
+                    size_hint: (root.width * 0.2, root.height * 0.2)
+                    on_press: root.send_press()
+
+                    canvas:
+                        Color:
+                            rgba: 0, 1, 0, 0.3
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+<ContactsWidget>:
+    on_press: root.parent.parent.parent.parent.parent.parent.cont(self.text)
+
+
