@@ -1,0 +1,54 @@
+2018-04-19 16:03:20,681   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:03:20,682   INFO        Client Mary connected, address ('127.0.0.1', 55603)
+2018-04-19 16:03:20,684   INFO        request from ('127.0.0.1', 55603): {'time': 1524143000.5838606, 'user': {'password': '123', 'account_name': 'Mary'}, 'action': 'authenticate'}
+2018-04-19 16:03:21,153   INFO        request from ('127.0.0.1', 55603): {'time': 1524143001.1397905, 'action': 'get_contacts', 'account_name': 'Mary'}
+2018-04-19 16:03:22,795   INFO        request from ('127.0.0.1', 55603): {'time': 1524143002.7846124, 'action': 'get_contacts', 'account_name': 'Mary'}
+2018-04-19 16:03:26,151   INFO        request from ('127.0.0.1', 55603): {'time': 1524143006.142483, 'message': 'fgfg', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:03:27,728   INFO        request from ('127.0.0.1', 55603): {'time': 1524143007.7182376, 'message': 'dfgd', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:03:31,375   INFO        request from ('127.0.0.1', 55603): {'time': 1524143011.3234904, 'message': 'tretr', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:03:36,881   INFO        request from ('127.0.0.1', 55603): {'time': 1524143016.874983, 'message': 'fgdfg', 'action': 'msg', 'account_name': 'Mary', 'to': 'Bob', 'encoding': 'utf-8'}
+2018-04-19 16:03:37,092   INFO        Client Bob offline, message fgdfg not delivered
+2018-04-19 16:03:40,252   INFO        request from ('127.0.0.1', 55603): {'time': 1524143020.2442098, 'message': 'dfgdf', 'action': 'msg', 'account_name': 'Mary', 'to': '#', 'encoding': 'utf-8'}
+2018-04-19 16:03:42,848   INFO        request from ('127.0.0.1', 55603): {'time': 1524143022.8427973, 'message': 'dfgd', 'action': 'msg', 'account_name': 'Mary', 'to': '#', 'encoding': 'utf-8'}
+2018-04-19 16:03:45,442   INFO        request from ('127.0.0.1', 55603): {'time': 1524143025.4268067, 'message': 'dfgdf', 'action': 'msg', 'account_name': 'Mary', 'to': '#', 'encoding': 'utf-8'}
+2018-04-19 16:05:24,199   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:05:24,208   INFO        Client Mary connected, address ('127.0.0.1', 55689)
+2018-04-19 16:05:24,208   INFO        request from ('127.0.0.1', 55689): {'time': 1524143124.195374, 'user': {'password': '123', 'account_name': 'Mary'}, 'action': 'authenticate'}
+2018-04-19 16:05:24,719   INFO        request from ('127.0.0.1', 55689): {'time': 1524143124.709236, 'action': 'get_contacts', 'account_name': 'Mary'}
+2018-04-19 16:05:28,477   INFO        request from ('127.0.0.1', 55689): {'time': 1524143128.4684787, 'message': 'gdfgf', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:05:30,449   INFO        request from ('127.0.0.1', 55689): {'time': 1524143130.4403768, 'message': 'dfgfdg', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:05:32,121   INFO        request from ('127.0.0.1', 55689): {'time': 1524143132.103599, 'message': 'dgdfg', 'action': 'msg', 'account_name': 'Mary', 'to': '#chat', 'encoding': 'utf-8'}
+2018-04-19 16:05:34,377   INFO        request from ('127.0.0.1', 55689): {'time': 1524143134.368167, 'message': 'dfgdf', 'action': 'msg', 'account_name': 'Mary', 'to': 'Bob', 'encoding': 'utf-8'}
+2018-04-19 16:05:34,602   INFO        Client Bob offline, message dfgdf not delivered
+2018-04-19 16:05:37,176   INFO        request from ('127.0.0.1', 55689): {'time': 1524143137.163138, 'message': 'dfgdfg', 'action': 'msg', 'account_name': 'Mary', 'to': '#', 'encoding': 'utf-8'}
+2018-04-19 16:06:03,371   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:06:03,413   INFO        Client Bob connected, address ('127.0.0.1', 55702)
+2018-04-19 16:06:03,413   INFO        request from ('127.0.0.1', 55702): {'time': 1524143163.3670068, 'user': {'password': '123', 'account_name': 'Bob'}, 'action': 'authenticate'}
+2018-04-19 16:06:03,602   INFO        request from ('127.0.0.1', 55702): {'time': 1524143163.5051763, 'action': 'get_contacts', 'account_name': 'Bob'}
+2018-04-19 16:06:49,808   INFO        request from ('127.0.0.1', 55702): {'time': 1524143209.8055308, 'message': 'ghgfh', 'action': 'msg', 'account_name': 'Bob', 'to': 'Mary', 'encoding': 'utf-8'}
+2018-04-19 16:06:52,659   INFO        request from ('127.0.0.1', 55689): {'time': 1524143212.649848, 'message': 'hfghf', 'action': 'msg', 'account_name': 'Mary', 'to': '#', 'encoding': 'utf-8'}
+2018-04-19 16:07:03,141   INFO        request from ('127.0.0.1', 55689): {'time': 1524143223.1319666, 'message': 'fghfgh', 'action': 'msg', 'account_name': 'Mary', 'to': 'Bob', 'encoding': 'utf-8'}
+2018-04-19 16:47:52,536   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:47:52,552   INFO        Client Mary connected, address ('127.0.0.1', 56873)
+2018-04-19 16:47:52,554   INFO        request from ('127.0.0.1', 56873): {'action': 'authenticate', 'user': {'password': '123', 'account_name': 'Mary'}, 'time': 1524145672.3950522}
+2018-04-19 16:47:57,385   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145677.3765237, 'to': '#chat', 'account_name': 'Mary', 'message': 'ffdg'}
+2018-04-19 16:47:58,526   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145678.5165894, 'to': '#chat', 'account_name': 'Mary', 'message': 'dfg'}
+2018-04-19 16:47:59,681   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145679.6714258, 'to': '#chat', 'account_name': 'Mary', 'message': 'dfg'}
+2018-04-19 16:48:01,331   INFO        request from ('127.0.0.1', 56873): {'account_name': 'Mary', 'action': 'get_contacts', 'time': 1524145681.321461}
+2018-04-19 16:48:02,750   INFO        request from ('127.0.0.1', 56873): {'account_name': 'Mary', 'action': 'get_contacts', 'time': 1524145682.7428763}
+2018-04-19 16:48:17,536   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145697.5270677, 'to': 'Bob', 'account_name': 'Mary', 'message': 'dfdg'}
+2018-04-19 16:48:17,768   INFO        Client Bob offline, message dfdg not delivered
+2018-04-19 16:48:19,233   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145699.2173972, 'to': 'Bob', 'account_name': 'Mary', 'message': 'dfgfdg'}
+2018-04-19 16:48:19,524   INFO        Client Bob offline, message dfgfdg not delivered
+2018-04-19 16:51:53,432   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:51:53,490   INFO        Client Jack connected, address ('127.0.0.1', 56954)
+2018-04-19 16:51:53,490   INFO        request from ('127.0.0.1', 56954): {'action': 'authenticate', 'user': {'password': '123', 'account_name': 'Jack'}, 'time': 1524145913.4270034}
+2018-04-19 16:51:53,599   INFO        request from ('127.0.0.1', 56954): {'account_name': 'Jack', 'action': 'get_contacts', 'time': 1524145913.5281126}
+2018-04-19 16:52:11,403   INFO        request from ('127.0.0.1', 56873): {'account_name': 'Mary', 'action': 'get_contacts', 'time': 1524145931.387861}
+2018-04-19 16:52:15,344   INFO        request from ('127.0.0.1', 56873): {'to': 'Jack', 'account_name': 'Mary', 'action': 'add_contact', 'time': 1524145935.3342104}
+2018-04-19 16:52:20,959   INFO        request from ('127.0.0.1', 56873): {'action': 'msg', 'encoding': 'utf-8', 'time': 1524145940.9519615, 'to': 'Jack', 'account_name': 'Mary', 'message': 'fgfdg'}
+2018-04-19 16:52:23,127   INFO        request from ('127.0.0.1', 56954): {'action': 'msg', 'time': 1524145943.111327, 'encoding': 'utf-8', 'to': 'Mary', 'account_name': 'Jack', 'message': 'dfgfdgd'}
+2018-04-19 16:52:56,736   INFO        Function	client_connected 	called from 	connection_made
+2018-04-19 16:52:56,795   INFO        Client Bob connected, address ('127.0.0.1', 56976)
+2018-04-19 16:52:56,796   INFO        request from ('127.0.0.1', 56976): {'action': 'authenticate', 'user': {'password': '123', 'account_name': 'Bob'}, 'time': 1524145976.7315784}
+2018-04-19 16:52:56,991   INFO        request from ('127.0.0.1', 56976): {'account_name': 'Bob', 'action': 'get_contacts', 'time': 1524145976.8086562}
